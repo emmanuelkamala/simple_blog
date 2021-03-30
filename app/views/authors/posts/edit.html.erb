@@ -22,10 +22,15 @@
         <% @post.elements.each do |element| %>
           <% if element.persisted? %>
            <div class="mb-4">
-            <%= form_with(model: [@post, element]) do |form| %>
-              <%= form.rich_text_area :content %>
-              <%= form.submit "Save", class: 'btn btn-primary mt-3' %>
-            <% end %>
+            <div class="paragraph-content">
+              <%= element.content %>
+            </div>
+            <div class="paragraph-form">
+              <%= form_with(model: [@post, element]) do |form| %>
+                <%= form.rich_text_area :content %>
+                <%= form.submit "Save", class: 'btn btn-primary mt-3' %>
+              <% end %>
+            </div>
            </div> 
           <% end %>
         <% end %>
