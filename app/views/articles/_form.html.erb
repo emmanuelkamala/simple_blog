@@ -22,6 +22,16 @@
   </div>
 
   <div>
+    <%= form.label :excerpt, style: "display: block" %>
+    <%= form.text_field :excerpt %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
     <%= form.label :published_at, style: "display: block" %>
     <%= form.datetime_field :published_at %>
   </div>
